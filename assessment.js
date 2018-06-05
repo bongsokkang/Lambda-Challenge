@@ -6,10 +6,10 @@ After writing your function uncomment the matching function reference at the bot
 
 // 1. Write a function called helloWorld that returns the string 'Hello World!'.
 
-function helloWorld() {
-
+function helloWorld(span) {
+console.log (span);
 }
-
+helloWorld("helloWorld");
 /*
 2. Write a function called lambdaSchool that has a single parameter called num.
      num will be a positive integer.
@@ -23,9 +23,20 @@ function helloWorld() {
              lambdaSchool(8); // returns 8
 */
 
-function lambdaSchool() {
-
-}
+function lambdaSchool(num) {
+  if(num%3 ===0 && num%5 ===0){
+    console.log ("Lambda School");
+  }
+  else if (num%3 === 0){
+    console.log ("Lambda");
+  }
+  else if (num%5 === 0){
+    console.log ("School");
+  }
+  else 
+    console.log (num);
+  
+  }
 
 /*
 3. Write a function called longestString that has a single parameter called strs.
@@ -37,10 +48,22 @@ function lambdaSchool() {
              longestString(['hi', 'hello', 'ni hao', 'guten tag']); // returns 'guten tag'
              longestString(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 */
+function longeststring(num){
+  var strings = num.split(",");
+  var compare = 0;
+  var longest; 
+  
+  for(let i=0; i<strings.length;i++){
+    if(strings[i].length> compare ){
+      compare=strings[i].length;    
+      longest = strings[i];
+   
+    }
+  }
+     console.log(longest);
+  }
 
-function longestString() {
 
-}
 
 /*
 4. Write a function called computeUserAverageAge that has a single parameter called users
@@ -63,9 +86,36 @@ function longestString() {
              computeUserAverageAge(users); // returns 62 (This number is rounded up from 61.6666)
 */
 
-function computeUserAverageAge() {
-
-}
+const users = [{
+  name: 'Brendan Eich',
+  age: 56,}, 
+  {name: 'Linus Torvalds',
+  age: 48,}, 
+  {name: 'us Tords',
+  age: 44,}, 
+  {name: 'Lus Alds',
+  age: 33,}, 
+  {name: 'Margaret Hamilton',
+  age: 81,}];
+  
+  
+  function compute(){
+  var ages = [];
+  
+  for (let i=0; i<users.length;i++){
+  var age = users[i].age;
+  ages.push(age);
+  }
+  
+  for(let i=0; i<ages.length; i++){
+  
+  var total = (ages[i] + ages[i])/[i];
+  }
+  
+  console.log(total)
+  }
+  
+  compute(users)
 
 module.exports = {
  helloWorld,
